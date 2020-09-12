@@ -1,0 +1,12 @@
+﻿@model IEnumerable<lab1_1.Models.Timetable>
+@{
+    ViewBag.Title = "Все пользователи";
+}
+<a asp-action="Create">Добавить пользователя</a>
+<table class="table">
+    <tr><td>Имя</td><td>Возраст</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.train_num</td><td>@item.prub</td></tr>
+    }
+</table>
