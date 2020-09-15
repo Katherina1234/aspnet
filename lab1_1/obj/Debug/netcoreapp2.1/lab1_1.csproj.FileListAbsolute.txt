@@ -30,3 +30,4 @@ F:\univer\asp\lab1_1\lab1_1\obj\Debug\netcoreapp2.1\lab1_1.dll
 F:\univer\asp\lab1_1\lab1_1\obj\Debug\netcoreapp2.1\lab1_1.pdb
 F:\univer\asp\lab1_1\lab1_1\obj\Debug\netcoreapp2.1\lab1_1.csproj.CopyComplete
 F:\univer\asp\lab1_1\lab1_1\obj\Debug\netcoreapp2.1\lab1_1.csprojAssemblyReference.cache
+F:\univer\asp\lab1_1\lab1_1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Orderpage.g.cshtml.cs

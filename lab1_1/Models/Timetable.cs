@@ -10,6 +10,7 @@ namespace lab1_1.Models
         public int Id { get; set; }
   
         public int train_num { get; set; }
+        public int num_koli { get; set; }
         public DateTime prub { get; set; }
         public DateTime vidb { get; set; }
         

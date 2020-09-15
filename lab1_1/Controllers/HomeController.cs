@@ -20,6 +20,7 @@ namespace lab1_1.Controllers
 
         public async Task<IActionResult> About()
         {
+            ViewBag.Trains = new List<Train> (await db.Trains.ToListAsync());
             return View(await db.Timetable.ToListAsync());
         }
         public IActionResult Create()
@@ -33,15 +34,24 @@ namespace lab1_1.Controllers
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-       
+        public async Task<IActionResult> Order(Order user)
+        {
+            db.Orders.Add(user);
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
         public IActionResult Index()
         {
             return View();
         }
-
+        public IActionResult Orderpage(int id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            
 
             return View();
         }

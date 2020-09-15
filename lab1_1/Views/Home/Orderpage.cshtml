@@ -1,0 +1,27 @@
+﻿@model lab1_1.Models.Order
+@{
+    ViewBag.Title = "Оформлення замовлення";
+}
+<form asp-action="order" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="id_timetable" class="control-label"></label>
+        <input type="number" asp-for="id_timetable" class="form-control" value="@ViewBag.Id" />
+ 
+        <h1>@ViewBag.Title</h1>
+    </div>
+    <div class="form-group">
+        <label asp-for="name" class="control-label">Ім'я</label>
+        <input type="text" asp-for="name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="surname" class="control-label">Призвіще</label>
+        <input type="text" asp-for="surname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="count_sits" class="control-label">кількість місць</label>
+        <input type="number" asp-for="count_sits" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>

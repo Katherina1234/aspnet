@@ -3,7 +3,7 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:aqua;
+    background-color:lavender;
 }
 
 /* Wrapping element */
@@ -12,7 +12,26 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+#cl2 {
+    
+    background-color: azure;
+   
+}
+.cl3 {
+ background-color:coral;
+}
 
+.cl1{
+    text-align:center;
+    font-size:large;
+    width:200pt;
+    height:50pt;
+   
+    margin-top:50px;
+    padding-top:10pt;
+    background-color:azure;
+    margin-left:460px;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;

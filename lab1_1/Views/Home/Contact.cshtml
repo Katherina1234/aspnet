@@ -4,12 +4,21 @@
 }
 <form asp-action="create" asp-controller="home">
     <div class="form-group">
-        <label asp-for="train_num" class="control-label">Имя</label>
+        <label asp-for="train_num" class="control-label">Номер поїзда</label>
         <input type="text" asp-for="train_num" class="form-control" />
     </div>
+
     <div class="form-group">
-        <label asp-for="prub" class="control-label">Возраст</label>
-        <input type="number" asp-for="prub" class="form-control" />
+        <label asp-for="prub" class="control-label">Прибуття</label>
+        <input type="datetime" asp-for="prub" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="prub" class="control-label">Відбуття</label>
+        <input type="datetime" asp-for="prub" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="num_koli" class="control-label">Номер колії</label>
+        <input type="datetime" asp-for="num_koli" class="form-control" />
     </div>
     <div class="form-group">
         <input type="submit" value="Отправить" class="btn btn-default" />

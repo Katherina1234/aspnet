@@ -2,11 +2,32 @@
 @{
     ViewBag.Title = "Все пользователи";
 }
-<a asp-action="Create">Добавить пользователя</a>
-<table class="table">
-    <tr><td>Имя</td><td>Возраст</td></tr>
+<h2>Станція Хельницький</h2>
+
+<table class="table" id="cl2">
+    <tr class="cl3"><td>№</td><td>Номер поїзда</td><td >Сполучення</td><td></td><td>Прибуття</td><td>Номер колії</td><td></td></tr>
     @foreach (var item in Model)
     {
-        <tr><td>@item.train_num</td><td>@item.prub</td></tr>
+
+    <tr>
+        <td>@item.Id</td>
+
+        @foreach (var item1 in ViewBag.Trains)
+        {
+            if (item1.id == item.train_num)
+            {
+                <td>@item1.name_train</td>
+                <td>@item1.city1 -</td>
+                <td>@item1.city2</td>}
+        }
+
+        <td>@item.prub</td>
+        <td>@item.num_koli</td>
+
+        <td><a asp-action="orderpage" asp-route-id="@item.Id">Замовити</a></td>
+
+
+    </tr>
     }
+
 </table>
