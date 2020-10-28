@@ -12578,11 +12578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\univer\\asp\\lab1_1\\lab1_1\\lab1_1.csproj",
+      "projectUniqueName": "F:\\univer\\asp\\lab3\\lab1_1\\lab1_1.csproj",
       "projectName": "lab1_1",
-      "projectPath": "F:\\univer\\asp\\lab1_1\\lab1_1\\lab1_1.csproj",
+      "projectPath": "F:\\univer\\asp\\lab3\\lab1_1\\lab1_1.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "F:\\univer\\asp\\lab1_1\\lab1_1\\obj\\",
+      "outputPath": "F:\\univer\\asp\\lab3\\lab1_1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

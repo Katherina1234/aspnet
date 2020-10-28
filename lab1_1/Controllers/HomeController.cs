@@ -17,12 +17,58 @@ namespace lab1_1.Controllers
         {
             db = context;
         }
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id != null)
+            {
+                Timetable user = await db.Timetable.FirstOrDefaultAsync(p => p.Id == id);
+                if (user != null)
+                    return View(user);
+            }
+            return NotFound();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(Timetable user)
+        {
+            db.Timetable.Update(user);
+            await db.SaveChangesAsync();
+            return RedirectToAction("About");
+        }
 
+        [HttpGet]
+        [ActionName("Delete")]
+        public async Task<IActionResult> ConfirmDelete(int? id)
+        {
+            if (id != null)
+            {
+                Timetable user = await db.Timetable.FirstOrDefaultAsync(p => p.Id == id);
+                if (user != null)
+                    return View(user);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id != null)
+            {
+                Timetable user = await db.Timetable.FirstOrDefaultAsync(p => p.Id == id);
+                if (user != null)
+                {
+                    db.Timetable.Remove(user);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("About");
+                }
+            }
+            return NotFound();
+        }
         public async Task<IActionResult> About()
         {
             ViewBag.Trains = new List<Train> (await db.Trains.ToListAsync());
             return View(await db.Timetable.ToListAsync());
         }
+       
         public IActionResult Create()
         {
             return View();

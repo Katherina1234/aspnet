@@ -1,9 +1,10 @@
 ﻿@model lab1_1.Models.Timetable
 @{
-    ViewBag.Title = "Додавання поїзду";
+    ViewBag.Title = "Редагування поїзда в розкладі";
 }
 <h2>@ViewBag.Title</h2>
-<form asp-action="create" asp-controller="home">
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+   
     <div class="form-group">
         <label asp-for="train_num" class="control-label">Номер поїзда</label>
         <input type="text" asp-for="train_num" class="form-control" />
@@ -22,6 +23,7 @@
         <input type="datetime" asp-for="num_koli" class="form-control" />
     </div>
     <div class="form-group">
-        <input type="submit" value="Отправить" class="btn btn-default" />
+        <input type="submit" value="Сохранить" class="btn btn-default" />
     </div>
+
 </form>
